@@ -1,0 +1,19 @@
+{
+  "task_name": "test_task",
+  "status": "completed",
+  "start_time": "2026-02-25T03:23:38.441029",
+  "iteration": 1,
+  "max_iterations": 10,
+  "max_time": 3600,
+  "attempts": [
+    {
+      "iteration": 1,
+      "timestamp": "2026-02-25T03:23:38.445202",
+      "result": "{'status': 'completed', 'data': 'example_result'}",
+      "error": null
+    }
+  ],
+  "current_iteration": 1,
+  "end_time": "2026-02-25T03:23:38.445225",
+  "completion_iteration": 1
+}

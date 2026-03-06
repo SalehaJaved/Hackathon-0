@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./backend/data:/app/data
+      - ./backend/receipts:/app/receipts
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:///./data/expenses.db
+      - SECRET_KEY=your-secret-key-change-in-production
+      - DEBUG=true
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

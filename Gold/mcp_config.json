@@ -1,0 +1,23 @@
+{
+  "servers": [
+    {
+      "name": "email-mcp",
+      "command": "python",
+      "args": ["mcp_servers/email_mcp_server.py"],
+      "env": {
+        "EMAIL_USER": "your_email@example.com",
+        "EMAIL_PASSWORD": "your_app_password"
+      }
+    },
+    {
+      "name": "social-media-mcp",
+      "command": "python",
+      "args": ["mcp_servers/social_media_mcp_server.py"]
+    },
+    {
+      "name": "filesystem",
+      "command": "builtin",
+      "builtin": "filesystem"
+    }
+  ]
+}

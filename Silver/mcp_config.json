@@ -1,0 +1,31 @@
+{
+  "servers": [
+    {
+      "name": "email",
+      "command": "python",
+      "args": ["mcp_servers/email_mcp/email_mcp_server.py"],
+      "env": {
+        "EMAIL_USER": "${EMAIL_USER}",
+        "EMAIL_PASSWORD": "${EMAIL_PASSWORD}"
+      }
+    },
+    {
+      "name": "social_media",
+      "command": "python",
+      "args": ["mcp_servers/social_media_mcp/social_media_mcp_server.py"],
+      "env": {
+        "LINKEDIN_TOKEN": "${LINKEDIN_TOKEN}",
+        "TWITTER_TOKEN": "${TWITTER_TOKEN}",
+        "FACEBOOK_TOKEN": "${FACEBOOK_TOKEN}"
+      }
+    },
+    {
+      "name": "browser",
+      "command": "python",
+      "args": ["mcp_servers/browser_mcp/browser_mcp_server.py"],
+      "env": {
+        "HEADLESS": "true"
+      }
+    }
+  ]
+}
